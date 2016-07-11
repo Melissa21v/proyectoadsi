@@ -22,15 +22,6 @@ class Employees extends Person_controller
 		$this->load->view('people/manage',$data);
 	}
 	
-	/*
-	Devuelve filas de datos tabla de empleados. Esto se llama con AJAX. 
-	*/
-	function search()
-	{
-		$search=$this->input->post('search');
-		$data_rows=get_people_manage_table_data_rows($this->Employee->search($search),$this);
-		echo $data_rows;
-	}
 	
 	/*
 	Da sugerencias de búsqueda en base a lo que está siendo buscado
